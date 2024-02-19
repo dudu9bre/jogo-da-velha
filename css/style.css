@@ -115,9 +115,18 @@ h1 {
     padding: 20px;
 }
 
+/* footer */
+
+footer {
+    display: flex;
+}
+
 @media (max-width: 600px) {
     #msg p {
         width: 250px;
         font-size: 25px;
+    }
+    footer h2 {
+        font-size: 1em;
     }
 }
