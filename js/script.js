@@ -221,19 +221,21 @@ function jogadaIa() {
     let contador = 0
     let cheios = 0
 
-    for(let i = 0; i < boxes.length; i++) {
-        let nRandom = Math.floor(Math.random() * 5)
-
-        if (boxes[i].childNodes[0] == undefined) {
-            if (nRandom <= 1) {
-                boxes[i].appendChild(cloneO)
-                contador++
+    setTimeout(() => {
+        for(let i = 0; i < boxes.length; i++) {
+            let nRandom = Math.floor(Math.random() * 5)
+    
+            if (boxes[i].childNodes[0] == undefined) {
+                if (nRandom <= 1) {
+                    boxes[i].appendChild(cloneO)
+                    contador++
+                }
+            } else {
+                cheios++
             }
-        } else {
-            cheios++
         }
-    }
-    if (contador == 0 && cheios < 9) {
-        jogadaIa()
-    }
+        if (contador == 0 && cheios < 9) {
+            jogadaIa()
+        }
+    }, 1000)
 }
